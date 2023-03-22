@@ -18,13 +18,6 @@ def construct_index (directory_path):
     index.save_to_disk('index.json') # this will have the trained knowledge
     return index
 
-def ask_bot(input_index='index.json'):
-    index = GPTSimpleVectorIndex.load_from_disk(input_index)
-    while True:
-        query=input('What do you want to ask the bot? \n')
-        response = index.query(query,response_mode="compact")
-        print('\n Bot says: \n\n'+ response.response + "\n\n\n")
-
 
 index=construct_index('/Users/SaiNitesh/Projects/openai-chatbot/content/meditation/');
 
