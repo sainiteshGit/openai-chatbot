@@ -21,7 +21,7 @@ df["combined"] = (
 )
 df.head(2)
 
-# subsample to 1k most recent reviews and remove samples that are too long
+##### subsample to 1k most recent reviews and remove samples that are too long
 top_n = 500
 df = df.sort_values("Time").tail(top_n * 2)  # first cut to first 2k entries, assuming less than half will be filtered out
 df.drop("Time", axis=1, inplace=True)
