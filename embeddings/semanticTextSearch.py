@@ -11,7 +11,7 @@ df = pd.read_csv(datafile_path)
 
 df["embedding"] = df.embedding.apply(eval).apply(np.array)
 
-# search through the reviews for a specific product
+##### search through the reviews for a specific product
 def search_reviews(df, product_description, n=3, pprint=True):
     product_embedding = get_embedding(
         product_description,
