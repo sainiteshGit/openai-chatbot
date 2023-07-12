@@ -33,7 +33,7 @@ def search_reviews(df, product_description, n=3, pprint=True):
 
 query=input('What do you want to search in reviews first time? \n')
 results = search_reviews(df, query, n=2)
-print('####################################################### RESULTS #################################################################')
+print('############################################################# RESULTS #######################################################################')
 print(results);
 print('####################################################################################################')
 query=input('What do you want to search in reviews second time? \n')
